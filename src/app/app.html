@@ -6,7 +6,11 @@
 <router-outlet></router-outlet>
 
 
-<div>
+<!-- Interpolation - {{}},
+Property Binding - [title],
+Event Binding - (click) -->
+
+<!-- <div>
   <h1>{{title}}</h1>
   <button (click)="incrementCounter()">IncrementCounter</button>
 
@@ -17,4 +21,54 @@
   Input Value: {{inputData}} <br><br>
 
   <input [value]="inputData" (input)="setInputData($any($event.target).value)">
+</div> -->
+
+
+<!-- Two-way data binding -->
+
+<div>
+  <h1>Enter your name:</h1>
+  <input type="text" [(ngModel)]="name" />
+
+  <br><br>
+
+  Inputted name: <b>{{name}}</b>
+
+  <br><br>
+
+  <label>Enter your location: </label>
+  <input type="text" [(ngModel)]="location" (ngModelChange)="setUpperCaseLocation($event)">
+
+  <br><br>
+
+  Location: <b>{{location}}</b>
+
+  <br><br>
+
+  <label>Select your favourite language: </label>
+  <select [(ngModel)]="favouriteLanguage">
+    
+    <option value="Java">Java</option>
+    <option value="Python">Python</option>
+    <option value="Scala">Scala</option>
+    
+  </select>
+
+  <br><br>
+
+  Favourite Language: <b>{{favouriteLanguage}}</b>
+  
+  <br><br>
+
+  <label>Choose your color:</label>
+  <label *ngFor="let color of colors; let i = index">
+    <input id="color{{i}}" name="mycolors" type="radio" [value]="color" [(ngModel)]="favouriteLanguage">
+    {{color}}
+  </label>
+
+  <br><br>
+
+  Favourite Colour: <b>{{favouriteColor}}</b>
+
+
 </div>
