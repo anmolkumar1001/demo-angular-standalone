@@ -1,7 +1,14 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Routes } from '@angular/router';
 
-import { routes } from './app.routes';
+
+import { Home } from './home/home';
+import { About } from './about/about';
+
+const routes: Routes = [
+  { path: '', component: Home},
+  { path: 'about', component: About}
+];
 
 export const appConfig: ApplicationConfig = {
   providers: [
