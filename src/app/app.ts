@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 // import { NgForOf } from "../../node_modules/@angular/common/common_module.d";
 import { FormsModule } from '@angular/forms';
 
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

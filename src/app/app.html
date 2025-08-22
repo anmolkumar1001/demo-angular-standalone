@@ -62,7 +62,7 @@ Event Binding - (click) -->
 
   <label>Choose your color:</label>
   <label *ngFor="let color of colors; let i = index">
-    <input id="color{{i}}" name="mycolors" type="radio" [value]="color" [(ngModel)]="favouriteLanguage">
+    <input id="color{{i}}" name="mycolors" type="radio" [value]="color" [(ngModel)]="favouriteColor">
     {{color}}
   </label>
 
