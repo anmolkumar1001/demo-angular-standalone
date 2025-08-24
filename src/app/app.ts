@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.css'
 })
 export class App {
+
   // protected readonly title = signal('demo-angular-standalone');
 
   // title: string = 'Demonstrating of event binding';
@@ -24,10 +25,14 @@ export class App {
   //   console.log("Counter = " + this.counter);
   // }
 
+
   // setInputData(value: string) {
   //   this.inputData = value.toUpperCase();
   //   console.log("Input Data = " + this.inputData);
   // }
+
+
+
 
   title: string = "Demonstrating of Two-way binding";
   name: string = "Steve Jobs";
@@ -41,5 +46,6 @@ export class App {
     console.log(locationData);
     this.location = locationData.toUpperCase();
   }
+
 
 }

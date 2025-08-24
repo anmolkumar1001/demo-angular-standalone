@@ -1,12 +1,12 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
-import { Home } from './home/home';
+import { HomeComponent } from './home/home';
 import { About } from './about/about';
 
+
 const routes: Routes = [
-  { path: '', component: Home},
+  { path: '', component: HomeComponent},
   { path: 'about', component: About}
 ];
 
